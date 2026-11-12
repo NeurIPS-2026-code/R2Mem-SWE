@@ -1,0 +1,9 @@
+# Python 3.11 recommended. Install the pinned mini checkout separately (README).
+# Direct dependency pins; not a complete transitive lockfile.
+litellm==1.108.4
+openai==3.49.0
+sentence-transformers==3.4.1
+transformers==4.51.1
+datasets==3.6.0
+huggingface-hub==0.36.2
+numpy==1.26.4

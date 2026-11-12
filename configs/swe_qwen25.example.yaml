@@ -1,0 +1,17 @@
+# Merge AFTER pinned mini's swebench_backticks.yaml. Values are development defaults,
+# not validated benchmark hyperparameters. Check /v1/models for the actual model ID.
+agent:
+  step_limit: 60
+  cost_limit: 0  # local inference; call and wall-time budgets remain enforced
+  wall_time_limit_seconds: 3600
+model:
+  model_class: litellm_textbased
+  model_name: openai/Qwen2.5-7B-Instruct
+  cost_tracking: ignore_errors  # local inference has no provider USD price
+  model_kwargs:
+    api_base: http://127.0.0.1:8008/v1
+    api_key: local
+    temperature: 0
+    max_tokens: 2048
+environment:
+  environment_class: docker

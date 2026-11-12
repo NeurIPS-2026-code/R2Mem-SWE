@@ -1,0 +1,16 @@
+# Same budgets for pilot/full; original mini prompts and model unchanged.
+agent:
+  step_limit: 60
+  wall_time_limit_seconds: 3600
+model:
+  model_kwargs:
+    timeout: 120
+    num_retries: 0
+environment:
+  executable: docker
+  cwd: /testbed
+  timeout: 60
+  pull_timeout: 120
+  container_timeout: 70m
+  run_args: [--rm, --pull=never, --network=none, --cpus=2, --memory=8g, --memory-swap=8g, --pids-limit=512]
+  interpreter: [/bin/bash, -c]
